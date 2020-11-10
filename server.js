@@ -5,6 +5,8 @@ const connectDb = require('./config/db');
 
 connectDb();
 
+app.use(express.json({extended: false}));
+
 app.get('/', (req, res) => {
   res.status(200).send("Hello")
 })
