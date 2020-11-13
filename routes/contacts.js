@@ -1,10 +1,24 @@
 const express = require('express');
 const router = express.Router();
+const User = require('../schemas/Users');
+const Contact = require('../schemas/Contact');
+const { check, validationResult } = require('express-validator');
+const auth = require('../middleware/auth')
+// const bcrypt = require('bcryptjs');
+// const jsonToken = require('jsonwebtoken');
+// const config = require('config');
+
 
 // GET api/contacts (get a specific users contacts)
 
-router.get('/', (req, res) => {
-  res.send('Get all contacts')
+router.get('/', auth, async (req, res) => {
+  try {
+    const contacts = await Contact.find({user: req.user.id}).sort({date: -1})
+    res.json(contacts);
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).send('Server Error');
+  }
 });
 
 // POST api/contacts (add new contact)
