@@ -21,16 +21,3 @@ module.exports = {
     path: __dirname + "/public"
   }
 };
-
-
-// ,
-//   devServer: {
-//     port:3000,
-//     contentBase: path.resolve(__dirname, "/public"),
-//     hot: true
-//   }
-
-
-// if (module.hot) {
-//   module.hot.accept()
-// }
