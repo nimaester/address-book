@@ -84,7 +84,6 @@ router.put("/:id", auth, async (req, res) => {
 // DELETE api/contacts/:id (delete a contact)
 
 router.delete("/:id", auth, async (req, res) => {
-  res.send("delete a contact");
 
   try {
     let contact = await Contact.findById(req.params.id);
