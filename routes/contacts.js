@@ -23,7 +23,9 @@ router.get('/', auth, async (req, res) => {
 
 // POST api/contacts (add new contact)
 
-router.post('/', (req, res) => {
+router.post('/', [ auth, [
+  check("name", "Name is required").not().isEmpty()
+]],(req, res) => {
   res.send('add a contact')
 });
 
