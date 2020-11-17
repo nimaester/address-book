@@ -13,9 +13,6 @@ const App = () => {
             Contacts
           </li>
           <li className="nav">
-            User
-          </li>
-          <li className="nav">
             About
           </li>
         </ul>
