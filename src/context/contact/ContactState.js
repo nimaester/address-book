@@ -14,3 +14,32 @@ import {
   REMOVE_ALERT
 } from '../types';
 
+const ContactState = (props) => {
+  const initialState = {
+    contacts: [
+      {
+        id: 1,
+        name: "John Reyes",
+        email: "zenkiman2000@yahoo.com",
+        phone: "111-111-1111",
+        type: "personal"
+      },
+
+      {
+        id: 2,
+        name: "Richard Siao",
+        email: "clint2000@yahoo.com",
+        phone: "222-222-2222",
+        type: "personal"
+      }
+
+      {
+        id: 1,
+        name: "Allen Sales",
+        email: "grayfox2000@yahoo.com",
+        phone: "333-333-3333",
+        type: "professional"
+      }
+    ]
+  }
+}
