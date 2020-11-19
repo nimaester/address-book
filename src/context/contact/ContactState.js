@@ -31,7 +31,7 @@ const ContactState = (props) => {
         email: "clint2000@yahoo.com",
         phone: "222-222-2222",
         type: "personal"
-      }
+      },
 
       {
         id: 1,
@@ -42,4 +42,22 @@ const ContactState = (props) => {
       }
     ]
   }
+
+  const [state, dispatch] = useReducer(contact, initialState);
+
+  // ADD CONTACT
+
+  // DELETE CONTACT
+
+  // SET CURRENT CONTACT
+
+  // CLEAR CURRENT CONTACT
+
+  // UPDATE CONTACT
+
+  // FILTER CONTACTS
+
+  // CLEAR FILTERED CONTACTS
+
+
 }
