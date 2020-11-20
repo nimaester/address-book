@@ -1,3 +1,9 @@
 node_modules/
 default.json
 bundle.js
+.env.local
+.env.devlopment.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
