@@ -1,14 +1,12 @@
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 const connectDb = require('./config/db');
 const path = require('path');
 
 connectDb();
 
 app.use(express.json({extended: false}));
-
-app.use("/", express.static(path.join(__dirname, "./public")));
 
 app.use('/api/users', require('./routes/users'));
 app.use('/api/contacts', require('./routes/contacts'));
