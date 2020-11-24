@@ -43,7 +43,7 @@ const ContactState = (props) => {
     ]
   }
 
-  const [state, dispatch] = useReducer(contact, initialState);
+  const [state, dispatch] = useReducer(contactReducer, initialState);
 
   // ADD CONTACT
 
@@ -62,7 +62,7 @@ const ContactState = (props) => {
   return (
     <ContactContext.Provider
       value={{
-        contacts: state.FILTER_CONTACTS
+        contacts: state.contacts
       }}>
       {props.children}
     </ContactContext.Provider>
