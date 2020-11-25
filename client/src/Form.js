@@ -39,7 +39,6 @@ const Form = () => {
       clearCurrent();
     } else {
       addContact(contact);
-
     }
     setContact(defaultState)
   }
