@@ -96,6 +96,11 @@ const ContactState = (props) => {
   }
 
   // CLEAR FILTERED CONTACTS
+  const clearFilter = () => {
+    dispatch({
+      type: CLEAR_FILTER
+    })
+  }
 
   return (
     <ContactContext.Provider
