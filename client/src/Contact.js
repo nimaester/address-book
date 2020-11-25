@@ -9,9 +9,8 @@ const Contact = ({contact, }) => {
 
   const onDelete = () => {
     deleteContact(id);
+    clearCurrent();
   }
-
-
 
   return (
     <div className='card bg-light'>
