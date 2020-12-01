@@ -7,6 +7,7 @@ import About from './About';
 import ContactState from './context/contact/ContactState';
 import AuthState from './context/authentication/AuthState';
 import Register from './Register';
+import Login from './Login';
 
 
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
                 <Route exact path ='/' component={Home} />
                 <Route exact path ='/About' component={About} />
                 <Route exact path ='/Register' component={Register} />
+                <Route exact path ='/Login' component={Login} />
               </Switch>
             </div>
           </Fragment>

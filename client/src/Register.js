@@ -26,7 +26,7 @@ const Register = () => {
     <div className='form-container'>
       <h1>
         Account
-        <span className='text-primary'>Register</span>
+        <span className='text-primary'> Register</span>
       </h1>
       <form onSubmit={handleSubmit}>
         <div className='form-group'>
