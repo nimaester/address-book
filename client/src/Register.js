@@ -11,13 +11,25 @@ const Register = () => {
 
   const {name, email, password, password2} = user;
 
+  const handleChange = (event) => {
+    setUser({
+      ...user,
+      [event.target.name]: event.target.value
+    })
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log('Register submitted')
+  }
+
   return (
     <div className='form-container'>
       <h1>
         Account
         <span className='text-primary'>Register</span>
       </h1>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className='form-group'>
           <label htmlFor='name'>Name</label>
           <input type='text' name='name' value={name} onChange={handleChange} />
