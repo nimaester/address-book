@@ -9,6 +9,7 @@ import AuthState from "./context/authentication/AuthState";
 import AlertState from "./context/alert/AlertState";
 import Register from "./Register";
 import Login from "./Login";
+import Alert from "./Alert";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
             <Fragment>
               <Navbar />
               <div className='container'>
+                <Alert />
                 <Switch>
                   <Route exact path='/' component={Home} />
                   <Route exact path='/about' component={About} />
