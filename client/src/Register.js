@@ -23,6 +23,25 @@ const Register = () => {
           <input type='text' name='name' value={name} onChange={handleChange} />
         </div>
       </form>
+      <form>
+        <div className='form-group'>
+          <label htmlFor='email'>Email Address</label>
+          <input type='email' name='email' value={email} onChange={handleChange} />
+        </div>
+      </form>
+      <form>
+        <div className='form-group'>
+          <label htmlFor='password'>Password</label>
+          <input type='password' name='password' value={password} onChange={handleChange} />
+        </div>
+      </form>
+      <form>
+        <div className='form-group'>
+          <label htmlFor='password2'>Confirm Password</label>
+          <input type='password2' name='password2' value={password2} onChange={handleChange} />
+        </div>
+        <input type='submit' value='Register...' className='btn btn-primary btn-block' />
+      </form>
     </div>
   );
 };
