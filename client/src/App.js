@@ -21,9 +21,9 @@ const App = () => {
             <div className="container">
               <Switch>
                 <Route exact path ='/' component={Home} />
-                <Route exact path ='/About' component={About} />
-                <Route exact path ='/Register' component={Register} />
-                <Route exact path ='/Login' component={Login} />
+                <Route exact path ='/about' component={About} />
+                <Route exact path ='/register' component={Register} />
+                <Route exact path ='/login' component={Login} />
               </Switch>
             </div>
           </Fragment>
