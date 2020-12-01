@@ -6,6 +6,8 @@ import Home from './Home';
 import About from './About';
 import ContactState from './context/contact/ContactState';
 import AuthState from './context/authentication/AuthState';
+import Register from './Register';
+
 
 const App = () => {
 
@@ -19,6 +21,7 @@ const App = () => {
               <Switch>
                 <Route exact path ='/' component={Home} />
                 <Route exact path ='/About' component={About} />
+                <Route exact path ='/Register' component={Register} />
               </Switch>
             </div>
           </Fragment>
