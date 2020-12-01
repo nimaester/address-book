@@ -28,6 +28,8 @@ const AuthState = (props) => {
   //LOGIN
   //LOGOUT
   //CLEAR ERRORS
+
+
   return (
     <AuthContext.Provider
       value={{
@@ -42,4 +44,4 @@ const AuthState = (props) => {
   )
 }
 
-export default ContactState;
+export default AuthState;
