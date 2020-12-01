@@ -4,7 +4,7 @@ import AlertContext from "./context/alert/alertContext";
 const Register = () => {
 
   const alertContext = useContext(AlertContext);
-  const setAlert = alertContext;
+  const {setAlert} = alertContext;
 
   const [user, setUser] = useState({
     name: "",
@@ -31,7 +31,6 @@ const Register = () => {
     } else {
       console.log("Register submitted");
     }
-
   };
 
   return (
