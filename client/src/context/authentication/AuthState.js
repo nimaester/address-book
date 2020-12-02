@@ -44,7 +44,7 @@ const AuthState = (props) => {
     } catch (error) {
       dispatch({
         type: REGISTER_FAIL,
-        payload: error.response.data.message
+        payload: error.response.data.msg
       })
     }
   }
@@ -58,7 +58,9 @@ const AuthState = (props) => {
   }
   //CLEAR ERRORS
   const clearErrors = () => {
-    console.log('clear Errors')
+    dispatch({
+      type: CLEAR_ERRORS
+    })
   }
 
 
