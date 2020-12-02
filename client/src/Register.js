@@ -62,6 +62,7 @@ const Register = () => {
             name='password'
             value={password}
             onChange={handleChange}
+            minLength='6'
           />
         </div>
 
@@ -72,6 +73,7 @@ const Register = () => {
             name='password2'
             value={password2}
             onChange={handleChange}
+            minLength='6'
           />
         </div>
         <input
