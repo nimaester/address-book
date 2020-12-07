@@ -28,7 +28,7 @@ export default (state, action) => {
         isAuthenticated: false,
         loading: false,
         user: null,
-        error: action.payload
+        error: action.payload8
       }
     case CLEAR_ERRORS:
       return {
