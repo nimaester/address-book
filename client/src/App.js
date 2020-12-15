@@ -12,6 +12,10 @@ import Login from "./Login";
 import Alert from "./Alert";
 import setToken from "./SetToken";
 
+if (localStorage.token) {
+  setToken(localStorage.token);
+}
+
 const App = () => {
   return (
     <AuthState>
