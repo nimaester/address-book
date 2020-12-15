@@ -26,7 +26,17 @@ const AuthState = (props) => {
 
   //LOAD USER
   const loadUser = async () => {
-
+    try {
+      const res = await axios.get("/api/auth");
+      dispatch({
+        type: USER_LOADED,
+        payload: res.data,
+      });
+    } catch (error) {
+      dispatch({
+        type: AUTH_ERROR,
+      });
+    }
   };
   //REGISTER USER
   const register = async (formData) => {
