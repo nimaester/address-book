@@ -10,6 +10,7 @@ import AlertState from "./context/alert/AlertState";
 import Register from "./Register";
 import Login from "./Login";
 import Alert from "./Alert";
+import setToken from "./SetToken";
 
 const App = () => {
   return (
