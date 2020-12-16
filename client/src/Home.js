@@ -2,6 +2,7 @@ import React from 'react';
 import Contacts from './Contacts';
 import Form from './Form';
 import Filter from './Filter';
+import AuthContext from './context/authentication/authContext';
 
 const Home = () => {
   return (
