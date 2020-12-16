@@ -8,7 +8,7 @@ const Home = () => {
 
   useEffect(() => {
     authContext.loadUser();
-  })
+  }, [])
 
   const authContext = useContext(AuthContext);
 
