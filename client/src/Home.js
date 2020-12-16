@@ -8,6 +8,7 @@ const Home = () => {
 
   useEffect(() => {
     authContext.loadUser();
+    // eslit-disable-next-line
   }, [])
 
   const authContext = useContext(AuthContext);
