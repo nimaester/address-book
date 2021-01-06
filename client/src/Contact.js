@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import ContactContext from './context/contact/contactContext';
 
-const Contact = ({contact, }) => {
+const Contact = ({contact}) => {
 
   const contactContext = useContext(ContactContext);
   const {id, name, email, type, phone} = contact;

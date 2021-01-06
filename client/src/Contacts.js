@@ -1,12 +1,17 @@
-import React, {Fragment, useContext} from 'react';
+import React, {Fragment, useContext, useEffect} from 'react';
 import ContactContext from './context/contact/contactContext';
 import Contact from './Contact';
 import {CSSTransition, TransitionGroup} from 'react-transition-group';
+import Loader from './Loader';
 
 const Contacts = () => {
 
   const contactContext = useContext(ContactContext);
-  const {contacts, filtered} = contactContext;
+  const {contacts, filtered, getContacts, loading} = contactContext;
+
+  useEffect(() => {
+    getContacts();
+  }, []);
 
   if (contacts !== null && contacts.length === 0) {
     return <h4>Please add a contact</h4>;
@@ -14,6 +19,7 @@ const Contacts = () => {
 
   return (
     <Fragment>
+    {contacts !== null && !loading ? (
       <TransitionGroup>
         {filtered !== null ?
           filtered.map((contact) => (
@@ -28,6 +34,8 @@ const Contacts = () => {
           ))
         }
       </TransitionGroup>
+    ) : <Loader />}
+
     </Fragment>
   );
 };
