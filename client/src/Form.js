@@ -32,19 +32,18 @@ const Form = () => {
     })
   }
 
+  const clearAll = () => {
+    clearCurrent();
+  }
+
   const handleSubmit = (event) => {
     event.preventDefault();
     if (current) {
       updateContact(contact);
-      clearCurrent();
     } else {
       addContact(contact);
     }
-    setContact(defaultState)
-  }
-
-  const clearAll = () => {
-    clearCurrent();
+    clearAll();
   }
 
 
