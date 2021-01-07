@@ -20,7 +20,7 @@ import {
 
 const ContactState = (props) => {
   const initialState = {
-    contacts: [],
+    contacts: null,
     current: null,
     filtered: null,
     error: null
@@ -66,11 +66,19 @@ const ContactState = (props) => {
   }
 
   // DELETE CONTACT
-  const deleteContact = (id) => {
-    dispatch({
-      type: DELETE_CONTACT,
-      payload: id
-    })
+  const deleteContact = async (id) => {
+    try {
+      await axios.delete(`/api/contacts/${id}`);
+      dispatch({
+        type: DELETE_CONTACT,
+        payload: id
+      })
+    } catch (error) {
+      dispatch({
+        type: CONTACT_ERROR,
+        payload: error.response.message
+      })
+    }
   }
 
   // SET CURRENT CONTACT
@@ -111,6 +119,12 @@ const ContactState = (props) => {
     })
   }
 
+  const clearContacts = () => {
+    dispatch({
+      type: CLEAR_CONTACTS
+    })
+  }
+
   return (
     <ContactContext.Provider
       value={{
@@ -125,7 +139,8 @@ const ContactState = (props) => {
         updateContact,
         filterContacts,
         clearFilter,
-        getContacts
+        getContacts,
+        clearContacts
       }}>
       {props.children}
     </ContactContext.Provider>
