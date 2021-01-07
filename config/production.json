@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://nimtayo:12345@cluster0.ghnve.mongodb.net/<dbname>?retryWrites=true&w=majority",
+  "jsonTokenSecret": "secret"
+}
